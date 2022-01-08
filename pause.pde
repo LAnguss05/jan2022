@@ -1,6 +1,6 @@
 void pause () {
   background (aqua);
-  
+  //show 
   introsGIF.show();
   whiteButton.show ();
   pauseButton.show ();
@@ -23,16 +23,20 @@ void pause () {
   text( "Speed:   "  + myHero.speed, 260, 315);
   text("Plus 10 Immune: " + +myHero.hitpoint, 300, 415);
 
+//return to game button 
 
   if (whiteButton.clicked ) { 
     mode= GAME;
   }
+  
+  //choice 1
   if ( myHero.xp >1 && pauseButton.clicked) {
     myHero.hpMax= myHero.hpMax+10;
     myHero.xp= myHero.xp-5;
   }  
 
   //  pauseButton1.show ();
+  //choice 2
   if (myHero.xp >15 && pauseButton1.clicked) {
     myHero.speed= myHero.speed + 1;
     myHero.xp= myHero.xp-20;
@@ -40,6 +44,7 @@ void pause () {
 
 
   //  pauseButton2.show ();
+  //choice 3 
   if (myHero.xp >20 && pauseButton2.clicked) {
     myHero.hitpoint= myHero.hitpoint +10;
     if (myHero.hitpoint >myHero.hpMax) myHero.hitpoint=myHero.hpMax;

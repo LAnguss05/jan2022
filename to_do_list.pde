@@ -1,4 +1,6 @@
 /*
+Duedates, etc 
+
 CheckPoint deadlines What needs to be completed before the checkpoint
  
  1st checkpoint: DONE

@@ -7,9 +7,9 @@ import processing.javafx.*; //for processing 4
 
 //Notes: 
 //Find the exits to go to the next room
-//Special Feature: Big u win the big boss, u get bonus pts, but if u lose, gameover
+//Special Feature: if u win the big boss, u get bonus pts, but if u lose, gameover
 //Second feature is to teleport to other rooms in the map 
-//An giveup screen has been installed so that if you are out of xps or dropitems, etc, you 
+//A giveup screen has been installed so that if you are out of xps or dropitems, etc, you 
 
 
 // color pallette for the room, minimap, buttons, etc
@@ -89,13 +89,13 @@ final int PAUSE=2;
 final int GAMEOVER=3;
 final int WIN=4;
 
-
+//extra variable 
 int n;
 
 //arraylist
 ArrayList<Bullet> bulletList;
 
-
+//img + gif for man 
 PImage Pic;
 AnimatedGIF manDown;
 AnimatedGIF manUp;
@@ -114,15 +114,18 @@ final int  GUN=2 ;
 
 
 
-
+//teleport 
 int teleport = 200;
+
+
+
 void setup() {
 
-
+//mode + size 
   mode= INTRO;
   size(800, 600, FX2D);
 
-
+// text, bullet 
   bulletList = new ArrayList<Bullet>();
   //font
   dungeon= createFont ("Dungeons.ttf", 100);
@@ -158,6 +161,8 @@ void setup() {
   pauseButton1= new Button(".", 110, 310, 50, 50, aqua, blue);
   pauseButton2= new Button(".", 110, 420, 50, 50, aqua, blue);
   restartButton= new Button ("", 375, 100, 300, 100, blue, aqua);
+  
+  
   //create objects
   myObjects= new ArrayList <GameObject> (1000);
   myHero = new Hero ();
@@ -207,6 +212,7 @@ void draw() {
 
   click ();
 
+//win + lose 
   if (myHero.hitpoint <= 0) { 
     mode= GAMEOVER;
   }
@@ -214,6 +220,10 @@ void draw() {
   if (myHero.hpMax >= 220 && myHero.hitpoint >= 120) { 
     mode= WIN;
   }
+  
+  
+  
+  //mode framework 
   if (mode == INTRO) {
     intro ();
   } else if ( mode == GAME) {
@@ -231,7 +241,7 @@ void draw() {
 } /////////////////////////////////////end of void draw
 
 
-
+//click 
 void click() {
   mouseReleased = false;
   if (mousePressed) wasPressed = true;

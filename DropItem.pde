@@ -29,6 +29,7 @@ class Dropitem extends GameObject {
   }
 
   void show () {
+    // when to show if statements 
     if (type==GUN) {
       fill (c);
       circle (loc.x, loc.y, size);

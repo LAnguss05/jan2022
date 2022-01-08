@@ -31,7 +31,7 @@ class Hero extends GameObject {
     textSize (20);
     text (hitpoint, loc.x, loc.y);
     strokeWeight (3);
-
+//immunity 
 
     if ( immunity > 0) {
       immunity= immunity-1;
@@ -76,7 +76,7 @@ class Hero extends GameObject {
 
       k++;
 
-
+//immunity 
       if (immunity <= 0) {
         if (obj instanceof Enemy) {
           if (dist(loc.x, loc.y, obj.loc.x, obj.loc.y) <  obj.size) {
@@ -114,8 +114,6 @@ class Hero extends GameObject {
       roomY= roomY-1;
       loc = new PVector (width/2, height*0.9-10);
     }
-
-
 
 
     //east

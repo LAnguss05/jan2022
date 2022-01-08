@@ -53,4 +53,4 @@ class GameObject {
   }
 }
 
-// boolean: return a true or false value
+// quick defin:  boolean: return a true or false value

@@ -51,9 +51,9 @@ class Enemy extends GameObject {
         hitpoint= hitpoint - obj.damage;
         obj.hitpoint=0;
         if (hitpoint <= 0) {
-          if (random (0, 85)> 40)  myObjects.add (new Dropitem (loc.x, loc.y, roomX, roomY));
+          if (random (0, 85)> 40)  myObjects.add (new Dropitem (loc.x, loc.y, roomX, roomY)); //random for dropitem to drop 
           myHero.xp= myHero.xp+5;
-          myObjects.add ( new message ());
+          myObjects.add ( new message ()); // message that shows xp 
       
         }
       }

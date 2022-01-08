@@ -7,7 +7,7 @@ void game () {
 
   fill (aqua);
 
-
+//Button 
   textFont(text5);
   text ("Pause", 730, 15);
   greenButton.show (); 
@@ -15,6 +15,7 @@ void game () {
     mode=PAUSE;
   }
 
+//button 
   fill (aqua);
   textFont(text5);
   text ("Give Up", 50, 470);
