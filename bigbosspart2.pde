@@ -2,6 +2,8 @@ class Follower2 extends GameObject{
   
   
   int damages;
+  
+  
   Follower2 (){
     loc= new PVector (width/2, height/2);
     vel= new PVector (0, 0);
@@ -60,7 +62,7 @@ class Follower2 extends GameObject{
       GameObject oobj= myObjects.get (b);
       if (oobj instanceof Bullet && isCollidingWith (oobj)) {
 
-        hitpoint= hitpoint - int (oobj.vel.mag ());
+        hitpoint= hitpoint - 30;
         hitpoint= hitpoint - oobj.damage;
         oobj.hitpoint=0;
         if (hitpoint <= 0) {

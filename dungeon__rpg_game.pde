@@ -217,7 +217,7 @@ void draw() {
     mode= GAMEOVER;
   }
 
-  if (myHero.hpMax >= 220 && myHero.hitpoint >= 120) { 
+  if (myHero.hpMax >= 200 && myHero.hitpoint >= 110) { 
     mode= WIN;
   }
   
